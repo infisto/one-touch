@@ -1,0 +1,17 @@
+@mixin font($font-family, $color, $fz-l, $lh-l, $fz-m, $lh-m, $fz-s, $lh-s, $text-transform) {
+  font-family: $font-family;
+  font-weight: normal;
+  text-transform: $text-transform;
+  letter-spacing: $letter-spacing;
+  color: $color;
+  font-size: $fz-l;
+  line-height: $lh-l;
+  @media screen and (max-width: 768px) {
+    font-size: $fz-m;
+    line-height: $lh-m;
+  }
+  @media screen and (max-width: 576px) {
+    font-size: $fz-s;
+    line-height: $lh-s;
+  }
+}

@@ -1,0 +1,85 @@
+@font-face {
+  font-family: "Archeologicaps";
+  src: url("//db.onlinewebfonts.com/t/681dc595f4b32f65bc7c505cf22bb16d.eot");
+  src: url("//db.onlinewebfonts.com/t/681dc595f4b32f65bc7c505cf22bb16d.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/681dc595f4b32f65bc7c505cf22bb16d.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/681dc595f4b32f65bc7c505cf22bb16d.woff") format("woff"), url("//db.onlinewebfonts.com/t/681dc595f4b32f65bc7c505cf22bb16d.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/681dc595f4b32f65bc7c505cf22bb16d.svg#Archeologicaps") format("svg");
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  height: 100%;
+}
+
+html, body {
+  font-family: 'Forum', cursive;
+  letter-spacing: $letter-spacing;
+  height: 100%;
+}
+
+h1 {
+  margin: 0;
+}
+
+.container {
+  max-width: 1296px;
+  margin: 0 auto;
+  @media screen and (max-width: 768px) {
+    max-width: 768px;
+    padding: 0 4%;
+  }
+  @media screen and (max-width: 576px) {
+    max-width: 576px;
+  }
+}
+
+.caption-h1 {
+  @include font($ff-forum, white, 80px, 120px, 64px, 96px, 40px, 60px, uppercase);
+  display: inline-block;
+  max-width: 860px;
+  margin-top: 25px;
+  margin-bottom: 4.2rem;
+  @media screen and (max-width: 768px) {
+    max-width: 460px;
+    margin-bottom: 1.7rem;
+  }
+  @media screen and (max-width: 576px) {
+    max-width: 265px;
+    margin-bottom: .4rem;
+  }
+}
+
+.caption-h2 {
+  @include font($ff-forum, black, 64px, 96px, 48px, 72px, 30px, 45px, uppercase);
+  text-align: center;
+  margin-bottom: 4.5rem;
+  @media screen and (max-width: 768px) {
+    margin-bottom: 2rem;
+  }
+  @media screen and (max-width: 576px) {
+    margin-bottom: 2.6rem;
+  }
+}
+
+.caption-h3 {
+  @include font($ff-raleway, black, 24px, 36px, 18px, 27px, 18px, 27px, none);
+  padding: 0 25px;
+}
+
+.caption-h4 {
+  @include font($ff-raleway, black, 18px, 27px, 14px, 21px, 14px, 21px, none)
+}
+
+.text {
+  @include font($ff-raleway, white, 24px, 36px, 18px, 27px, 18px, 27px, none)
+}
+
+.router-link-active, .router-link-exact-active {
+  color: $main-blue !important;
+  text-decoration: underline !important;
+}

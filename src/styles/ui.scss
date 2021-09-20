@@ -1,0 +1,217 @@
+.btn {
+  font-family: "Forum", cursive;
+  font-size: $fz-caption-s;
+  border: 3px solid white;
+  background-color: transparent;
+  color: white;
+  width: 420px;
+  height: 75px;
+  letter-spacing: $letter-spacing;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: .2s;
+  display: block;
+  &:active {
+    background-color: white;
+    color: black;
+  }
+
+  &:disabled {
+    color: $main-gray;
+    border: 3px solid $main-gray;
+  }
+
+  @media screen and (max-width: 768px) {
+    max-width: 220px;
+    height: 50px;
+    font-size: $fz-main-text;
+  }
+  @media screen and (max-width: 576px) {
+    max-width: 215px;
+  }
+}
+
+.btn-support {
+  background-color: transparent;
+  border: 3px solid black;
+  width: 174px;
+  height: 75px;
+  font-size: $fz-price;
+  text-transform: uppercase;
+  letter-spacing: $letter-spacing;
+  font-family: "Forum", cursive;
+  cursor: pointer;
+  transition: .2s;
+
+  &:active {
+    background-color: $main-blue;
+  }
+
+  &:disabled {
+    color: $main-gray;
+    border: 3px solid $main-gray;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 140px;
+    height: 50px;
+    font-size: $fz-main-text;
+  }
+  @media screen and (max-width: 576px) {
+    width: 115px;
+    letter-spacing: 0;
+  }
+}
+
+.email-form__wrapper {
+  position: relative;
+  display: inline-block;
+  .email-form {
+    width: 750px;
+    height: 60px;
+    background-color: transparent;
+    border: 3px solid black;
+    font-size: $fz-main-text;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    letter-spacing: $letter-spacing;
+    @media screen and (max-width: 768px) {
+      max-width: 400px;
+      padding: 0 15px;
+      height: 50px;
+    }
+    @media screen and (max-width: 576px) {
+      max-width: 290px;
+      font-size: $fz-support-text;
+    }
+
+    &:before {
+      content: "123";
+    }
+    &:invalid + label {
+      &:before {
+        content: "";
+        position: absolute;
+        height: 6px;
+        width: 42px;
+        border-radius: 3px;
+        background-color: black;
+        top: 27px;
+        right: 40px;
+        transform: rotate(45deg);
+        @media screen and (max-width: 768px) {
+          height: 4px;
+          width: 32px;
+          top: 23px;
+          right: 10px;
+        }
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        height: 6px;
+        width: 42px;
+        border-radius: 3px;
+        background-color: black;
+        top: 27px;
+        right: 40px;
+        transform: rotate(-45deg);
+        @media screen and (max-width: 768px) {
+          height: 4px;
+          width: 32px;
+          top: 23px;
+          right: 10px;
+        }
+      }
+    }
+    &:valid + label {
+      &:before {
+        content: "";
+        position: absolute;
+        height: 6px;
+        width: 22px;
+        border-radius: 3px;
+        background-color: black;
+        top: 30px;
+        right: 60px;
+        transform: rotate(45deg);
+        @media screen and (max-width: 768px){
+          right: 30px;
+        }
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        height: 6px;
+        width: 32px;
+        border-radius: 3px;
+        background-color: black;
+        top: 26px;
+        right: 39px;
+        transform: rotate(-45deg);
+        @media screen and (max-width: 768px){
+          right: 10px;
+        }
+      }
+    }
+  }
+}
+
+.swiper-container {
+  height: 870px;
+  @media screen and (max-width: 1300px) {
+  }
+  @media screen and (max-width: 768px) {
+    height: 850px;
+    width: 340px;
+  }
+  @media screen and (max-width: 576px) {
+    width: 290px;
+  }
+}
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Raleway", sans-serif;
+  position: relative;
+  border: 3px solid black;
+  width: 420px;
+  height: 650px;
+  text-align: center;
+
+  .swiper-button-next, .swiper-button-prev, .swiper-pagination-bullet-active {
+    color: black;
+  }
+
+  img {
+    margin-top: 20px;
+    width: 200px;
+    height: 301px;
+  }
+
+  footer {
+    margin-bottom: 20px;
+    p, .btn-support {
+      display: inline-block;
+    }
+
+    p {
+      font-size: 30px;
+      line-height: 45px;
+      margin-left: 45px;
+      margin-right: 70px;
+      @media screen and (max-width: 768px) {
+        font-size: 22px;
+        line-height: 33px;
+      }
+      @media screen and (max-width: 576px) {
+        font-size: 22px;
+        line-height: 33px;
+        margin-left: 0;
+        margin-right: 40px;
+      }
+    }
+  }
+}
